@@ -1,0 +1,16 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class TulisFile {
+    public static void main(String[] args) {
+        try {
+            FileWriter tulis = new FileWriter("contoh.txt");
+            tulis.write("Halo, ini adalah isi file hasil penulisan.");
+            tulis.close();
+            System.out.println("Berhasil menulis ke file.");
+        } catch (IOException e) {
+            System.out.println("Terjadi error saat menulis file.");
+            e.printStackTrace();
+        }
+    }
+}
